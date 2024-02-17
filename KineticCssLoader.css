@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: darkslategrey;
+    height: 93vh;
+}
+.container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 7%;
+    margin: auto;
+}
+
+.triangle{
+    /* copy paste from the html in this and the following id's too*/
+    width: 0;
+	height: 0;
+    border-top: 48px solid transparent;
+    border-bottom: 48px solid transparent;   
+    display: inline;
+    /* transition: transform 1s ;
+    transition-delay: 0.2s; */
+}
+
+#left{
+
+    animation: rotateLeft 2s linear  infinite;
+    animation-iteration-count: infinite;
+	border-right: 49px solid white;
+    transform-origin:left;
+    transform: rotate(90deg);
+}
+
+#right{
+    animation: rotateRight 2s linear  infinite 1s;
+    animation-iteration-count: infinite;
+	border-left: 49px solid white;
+	transform-origin:right;
+}
+
+@keyframes rotateLeft{
+    0%,25%{
+        rotate: 90deg;
+    }
+    50%,75%{
+        rotate: 270deg;
+    }
+    100%{
+        rotate: 450deg;
+    }
+}
+
+@keyframes rotateRight{
+    0%,25%{
+        rotate: 90deg;
+    }
+    50%,75%{
+        rotate: 270deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
